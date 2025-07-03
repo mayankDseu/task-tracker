@@ -1,4 +1,4 @@
-// localStorage.js
+
 const TASKS_KEY = "tasks";
 
 export const getTasksFromStorage = () => {

@@ -67,16 +67,16 @@ This app lets users log in with a username, add and manage tasks, filter them by
 ---
 
 ## 🔗 Live Demo
-👉 [Click here to try the app](https://your-live-demo-link.vercel.app)  
-_(Replace with your actual Netlify/Vercel/GitHub Pages link)_
+👉 [Click here to try the app](https://task-tracker-pi-ruby.vercel.app/)  
+
 
 ---
 
 ## 🖼 Screenshots
 
-| Light Mode                          | Dark Mode                           |
-|------------------------------------|-------------------------------------|
-| ![Light Mode](public/screenshots/loginlight.jpg) | ![Dark Mode](public/screenshots/dark.png) |
+| Light Mode                          | Dark Mode                           |Responsive Mode
+|------------------------------------ |-------------------------------------|-----------------------------------|
+| ![Light Mode](screenshots/loginlight.jpg) | ![Dark Mode](screenshots/tasklist.jpg) |![Dark Mode](screenshots/responsive.jpg)|
 
 
 ---

@@ -1,5 +1,3 @@
-// TaskFilter.js
-import React from "react";
 import "../styles/App.css";
 
 const TaskFilter = ({ currentFilter, onChange, counts }) => {
