@@ -76,7 +76,7 @@ This app lets users log in with a username, add and manage tasks, filter them by
 
 | Light Mode                          | Dark Mode                           |Responsive Mode
 |------------------------------------ |-------------------------------------|-----------------------------------|
-| ![Light Mode](screenshots/loginlight.jpg) | ![Dark Mode](screenshots/tasklist.jpg) |![Dark Mode](screenshots/responsive.jpg)|
+| ![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true) | ![Dark Mode](screenshots/tasklist.jpg) |![Dark Mode](screenshots/responsive.jpg)|
 
 
 ---
