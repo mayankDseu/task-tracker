@@ -76,7 +76,7 @@ This app lets users log in with a username, add and manage tasks, filter them by
 
 | Light Mode                          | Dark Mode                           |Responsive Mode
 |------------------------------------ |-------------------------------------|-----------------------------------|
-| ![alt text](https://github.com/mayankDseu/task-tracker/blob/image/image.jpg?raw=true) | ![Dark Mode](screenshots/tasklist.jpg) |![Dark Mode](screenshots/responsive.jpg)|
+| ![  Light text](https://github.com/mayankDseu/task-tracker/blob/main/screenshots/loginlight.jpg?raw=true) | ![  Light text](https://github.com/mayankDseu/task-tracker/blob/main/screenshots/tasklist.jpg?raw=true) |![  Light text](https://github.com/mayankDseu/task-tracker/blob/main/screenshots/responsive.jpg?raw=true)|
 
 
 ---
