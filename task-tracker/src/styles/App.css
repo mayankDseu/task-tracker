@@ -1,0 +1,449 @@
+/* ------------------ RESET & BASE ------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+  height: 100vh;
+}
+
+/* ------------------ LOGIN PAGE ------------------ */
+.login-container {
+  background-color: white;
+  padding: 2.5rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.login-container h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+  transition: border 0.3s ease;
+}
+
+.login-container input:focus {
+  border: 1px solid #764ba2;
+  outline: none;
+}
+
+.login-container button {
+  background: #764ba2;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-container button:hover {
+  background: #5c3d91;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* ------------------ DASHBOARD LAYOUT ------------------ */
+.dashboard-layout {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.task-form-wrapper {
+  flex: 1;
+  padding: 2rem;
+  background-color: #fff;
+  border-right: 2px dashed #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 400px;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.05);
+}
+
+.task-panel {
+  flex: 2;
+  padding: 2rem;
+  background-color: #fff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: inset 2px 0 6px rgba(0, 0, 0, 0.03);
+}
+
+/* ------------------ TOP BAR FIX ------------------ */
+.task-panel > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.dark-toggle {
+  background: #444;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dark-toggle:hover {
+  background: #666;
+}
+
+.logout-btn {
+  background-color: #ff5252;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #e53935;
+}
+
+/* ------------------ FORM STYLES ------------------ */
+.task-form input,
+.task-form textarea {
+  width: 100%;
+  padding: 0.9rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.task-form button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  background: #667eea;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.task-form button:hover {
+  background: #5a67d8;
+}
+
+/* ------------------ TASK STYLES ------------------ */
+.task-list.scrollable {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+  max-height: calc(100vh - 250px);
+  padding-bottom: 1rem;
+}
+
+.task-list.scrollable::-webkit-scrollbar {
+  width: 8px;
+}
+
+.task-list.scrollable::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 10px;
+}
+
+.task-list.scrollable::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+.task-item {
+  background: #f9f9f9;
+  border-left: 6px solid #667eea;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.05);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+.task-item.completed {
+  background: #e6ffe6;
+  border-left-color: #38a169;
+}
+
+.task-item.overdue {
+  border-left-color: #e53935;
+  background: #fff0f0;
+}
+
+.task-item.overdue .task-time {
+  color: #e53935;
+  font-weight: bold;
+}
+
+.task-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.task-top h3 {
+  margin: 0;
+  word-break: break-word;
+  flex: 1;
+}
+
+.task-meta {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.status {
+  margin-top: 0.5rem;
+}
+
+.status .green {
+  color: green;
+}
+
+.status .red {
+  color: red;
+}
+
+.task-actions {
+  margin-top: 0.7rem;
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.task-actions button {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #e0e0e0;
+  transition: background 0.3s;
+}
+
+.task-actions button:hover {
+  background-color: #ccc;
+}
+
+/* ------------------ EDIT INPUTS ------------------ */
+.edit-title,
+.edit-desc {
+  width: 100%;
+  padding: 0.6rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+}
+
+/* ------------------ FILTERS ------------------ */
+.filter-tabs {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.filter-tabs button {
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  background: #e0e0e0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.filter-tabs button:hover {
+  background: #ccc;
+}
+
+.filter-tabs button.active {
+  background: #764ba2;
+  color: white;
+  font-weight: bold;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  margin: 1rem 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.priority-select {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.priority-badge {
+  padding: 0.3rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.priority-badge.high {
+  background-color: #e53935;
+}
+.priority-badge.medium {
+  background-color: #fbc02d;
+  color: #333;
+}
+.priority-badge.low {
+  background-color: #26a69a;
+}
+
+.category-badge {
+  padding: 0.3rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 0.4rem;
+}
+.category-badge.work {
+  background-color: #3b82f6;
+}
+.category-badge.personal {
+  background-color: #f59e0b;
+}
+.category-badge.health {
+  background-color: #10b981;
+}
+.category-badge.study {
+  background-color: #8b5cf6;
+}
+.category-badge.entertainment {
+  background-color: #ef4444;
+}
+.category-badge.general {
+  background-color: #9ca3af;
+}
+
+/* ------------------ DARK MODE ------------------ */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+.dark-mode .login-container,
+.dark-mode .task-form-wrapper,
+.dark-mode .task-panel {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+.dark-mode .task-item {
+  background: #2a2a2a;
+  border-left-color: #888;
+}
+.dark-mode .task-item.overdue {
+  background: #3a1a1a;
+  border-left-color: #ff6b6b;
+}
+.dark-mode .task-actions button {
+  background-color: #333;
+  color: #f1f1f1;
+}
+.dark-mode .task-actions button:hover {
+  background-color: #555;
+}
+.dark-mode .priority-badge.high {
+  background-color: #ff6b6b;
+}
+.dark-mode .priority-badge.medium {
+  background-color: #ffd54f;
+  color: #000;
+}
+.dark-mode .priority-badge.low {
+  background-color: #26c6da;
+}
+.dark-mode .search-bar,
+.dark-mode .edit-title,
+.dark-mode .edit-desc,
+.dark-mode input,
+.dark-mode textarea,
+.dark-mode select {
+  background-color: #2b2b2b;
+  color: white;
+  border-color: #444;
+}
+
+/* ------------------ MOBILE FIX ------------------ */
+@media screen and (max-width: 768px) {
+  .dashboard-layout {
+    flex-direction: column;
+    height: auto;
+  }
+  .task-form-wrapper,
+  .task-panel {
+    max-width: 100%;
+    width: 100%;
+    padding: 1rem;
+    box-shadow: none;
+    border: none;
+  }
+  .task-panel > div:first-child {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .task-list.scrollable {
+    max-height: unset;
+    overflow-y: visible;
+  }
+  .task-actions {
+    flex-direction: column;
+  }
+  .task-actions button {
+    width: 100%;
+  }
+}
